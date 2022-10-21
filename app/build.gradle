@@ -72,6 +72,7 @@ dependencies {
 
     // KotlinX Serialization : Json Parse
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0-RC"
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0' // For Convertor
 
     // LifeCycle For Flow
     def lifecycle_version = "2.5.1"
