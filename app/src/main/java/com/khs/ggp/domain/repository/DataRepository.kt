@@ -7,5 +7,5 @@ import kotlinx.coroutines.flow.Flow
 interface DataRepository {
     suspend fun getRemoteData(): Flow<Result<DataResponse>>
     suspend fun insertData(dataList: List<DataEntity>)
-    suspend fun getLocalData(): Flow<Result<List<DataEntity>>>
+    suspend fun getLocalData(): Flow<List<DataEntity>>
 }

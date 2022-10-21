@@ -13,5 +13,5 @@ interface DataDao {
     suspend fun insertData(dataEntity: List<DataEntity>)
 
     @Query("SELECT * FROM dataTable")
-    suspend fun getAllData(): Flow<Result<List<DataEntity>>>
+    fun getAllData(): Flow<List<DataEntity>>
 }

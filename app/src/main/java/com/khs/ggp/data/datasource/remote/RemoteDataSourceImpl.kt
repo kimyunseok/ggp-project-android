@@ -7,8 +7,8 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class RemoteDataSourceImpl @Inject constructor(private val apiService: ApiService): RemoteDataSource {
-    override suspend fun getData(): Flow<DataResponse> = flow {
-        val dataResponse = apiService.getData()
+    override suspend fun getData(): Flow<Result<DataResponse>> = flow {
+        val dataResponse = runCatching { apiService.getData() }
         emit(dataResponse)
     }
 }

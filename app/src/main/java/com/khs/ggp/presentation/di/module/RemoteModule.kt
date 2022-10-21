@@ -5,7 +5,10 @@ import com.khs.ggp.data.api.ApiClient
 import com.khs.ggp.data.api.ApiService
 import com.khs.ggp.data.datasource.remote.RemoteDataSource
 import com.khs.ggp.data.datasource.remote.RemoteDataSourceImpl
+import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType
@@ -14,6 +17,8 @@ import retrofit2.Retrofit
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
+@Module
+@InstallIn(SingletonComponent::class)
 object RemoteModule {
 
     @Singleton

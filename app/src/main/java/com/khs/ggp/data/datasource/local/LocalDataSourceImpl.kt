@@ -8,5 +8,5 @@ import javax.inject.Inject
 class LocalDataSourceImpl @Inject constructor(private val dataDao: DataDao): LocalDataSource {
     override suspend fun insertData(dataList: List<DataEntity>) = dataDao.insertData(dataList)
 
-    override suspend fun getAllData(): Flow<Result<List<DataEntity>>> = dataDao.getAllData()
+    override suspend fun getAllData(): Flow<List<DataEntity>> = dataDao.getAllData()
 }

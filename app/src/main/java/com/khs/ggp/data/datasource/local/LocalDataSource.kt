@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface LocalDataSource {
     suspend fun insertData(dataList: List<DataEntity>)
-    suspend fun getAllData(): Flow<Result<List<DataEntity>>>
+    suspend fun getAllData(): Flow<List<DataEntity>>
 }

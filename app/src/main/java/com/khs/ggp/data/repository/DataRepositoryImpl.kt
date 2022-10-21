@@ -16,6 +16,6 @@ class DataRepositoryImpl @Inject constructor(
 
     override suspend fun insertData(dataList: List<DataEntity>) = localDataSource.insertData(dataList)
 
-    override suspend fun getLocalData(): Flow<Result<List<DataEntity>>> = localDataSource.getAllData()
+    override suspend fun getLocalData(): Flow<List<DataEntity>> = localDataSource.getAllData()
 
 }

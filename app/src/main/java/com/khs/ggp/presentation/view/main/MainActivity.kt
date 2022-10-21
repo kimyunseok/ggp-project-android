@@ -1,7 +1,7 @@
 package com.khs.ggp.presentation.view.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.khs.ggp.R
 
 class MainActivity : AppCompatActivity() {
