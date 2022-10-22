@@ -5,4 +5,11 @@
     <string name="url_link_hint">여기에 링크를 입력해 주세요.</string>
     <string name="request_analyze">분석 요청</string>
     <string name="maximum_url_is_five">URL 분석은 최대 다섯 개까지 요청 가능합니다.</string>
+
+    <string name="analyze_result">분석 결과</string>
+    <string name="dangerous_notice">링크들의 댓글들을 분석해본 결과,\n다음의 위험에 노출되어 있습니다.</string>
+    <string name="dangerous_score_before">당신의 위험도 지수는&#160;</string>
+    <string name="dangerous_score_after">점 입니다.</string>
+    <string name="watch_result_detail">결과 상세 보기</string>
+
 </resources>

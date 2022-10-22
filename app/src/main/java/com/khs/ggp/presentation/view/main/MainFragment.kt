@@ -2,6 +2,7 @@ package com.khs.ggp.presentation.view.main
 
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.khs.ggp.R
 import com.khs.ggp.databinding.FragmentMainBinding
@@ -33,6 +34,10 @@ class MainFragment(override var layoutId: Int = R.layout.fragment_main) : BaseFr
             } else {
                 Toast.makeText(context, R.string.maximum_url_is_five, Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.mainAnalyzeRequestBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_analysisFragment)
         }
     }
 }
