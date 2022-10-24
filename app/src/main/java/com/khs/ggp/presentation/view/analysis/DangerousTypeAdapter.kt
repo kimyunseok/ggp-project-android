@@ -7,6 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.khs.ggp.databinding.ItemDangerousTypeHolderBinding
 import com.khs.ggp.domain.model.AnalysisType
+import com.khs.ggp.presentation.view.analysis.utils.convertTypeToColor
 
 class DangerousTypeAdapter(private val typeList: List<AnalysisType>): RecyclerView.Adapter<DangerousTypeAdapter.DangerousTypeHolder>() {
 
@@ -28,9 +29,14 @@ class DangerousTypeAdapter(private val typeList: List<AnalysisType>): RecyclerVi
         fun bind(item: AnalysisType) {
             binding.item = item
 
-            (binding.dangerousTypeView.layoutParams as ConstraintLayout.LayoutParams).apply {
-                matchConstraintPercentHeight = item.score
+            binding.dangerousTypeView.apply {
+                (layoutParams as ConstraintLayout.LayoutParams).apply {
+                    matchConstraintPercentHeight = item.score
+                }
+
+                setBackgroundColor(item.type.convertTypeToColor())
             }
+
         }
 
     }
