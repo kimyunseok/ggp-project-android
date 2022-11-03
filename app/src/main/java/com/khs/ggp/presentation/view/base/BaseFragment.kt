@@ -13,7 +13,7 @@ abstract class BaseFragment<T: ViewDataBinding>: Fragment() {
     val binding
         get() = _binding!!
 
-    abstract var layoutId: Int
+    abstract val layoutId: Int
 
     abstract fun init()
 

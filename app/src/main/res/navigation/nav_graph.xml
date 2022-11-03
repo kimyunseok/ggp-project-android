@@ -18,6 +18,15 @@
         android:id="@+id/analysisFragment"
         android:name="com.khs.ggp.presentation.view.analysis.AnalysisFragment"
         android:label="AnalysisFragment"
-        tools:layout="@layout/fragment_analysis"/>
+        tools:layout="@layout/fragment_analysis">
+        <action
+            android:id="@+id/action_analysisFragment_to_analysisDetailFragment"
+            app:destination="@id/analysisDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisDetailFragment"
+        android:name="com.khs.ggp.presentation.view.analysisdetail.AnalysisDetailFragment"
+        android:label="AnalysisDetailFragment"
+        tools:layout="@layout/fragment_analysis_detail"/>
 
 </navigation>

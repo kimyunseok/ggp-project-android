@@ -1,6 +1,7 @@
 package com.khs.ggp.presentation.view.analysis
 
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.khs.ggp.R
 import com.khs.ggp.databinding.FragmentAnalysisBinding
@@ -15,6 +16,7 @@ class AnalysisFragment(override var layoutId: Int = R.layout.fragment_analysis) 
 
         testFun()
         setUpRecyclerView()
+        setUpBtnListener()
     }
 
     private fun testFun() {
@@ -27,6 +29,12 @@ class AnalysisFragment(override var layoutId: Int = R.layout.fragment_analysis) 
                 layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
                 adapter = DangerousTypeAdapter(it)
             }
+        }
+    }
+
+    private fun setUpBtnListener() {
+        binding.analysisWatchDetailBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_analysisFragment_to_analysisDetailFragment)
         }
     }
     
