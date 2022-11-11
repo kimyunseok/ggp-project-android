@@ -33,6 +33,7 @@
                 android:id="@+id/dangerous_comment_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:overScrollMode="never"
                 app:layout_constraintTop_toBottomOf="@id/analysis_detail_tv1"/>
 
             <TextView
@@ -51,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
+                android:overScrollMode="never"
                 app:layout_constraintTop_toBottomOf="@id/analysis_detail_tv2"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
