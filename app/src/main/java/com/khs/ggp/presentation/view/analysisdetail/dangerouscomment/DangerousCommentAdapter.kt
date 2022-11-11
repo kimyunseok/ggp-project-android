@@ -2,6 +2,7 @@ package com.khs.ggp.presentation.view.analysisdetail.dangerouscomment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.khs.ggp.databinding.ItemDangerousCommentHolderBinding
 import com.khs.ggp.databinding.ItemYoutubeUrlHolderBinding
@@ -29,6 +30,11 @@ class DangerousCommentAdapter(private val dangerousCommentList: List<DangerousCo
             binding.item = item
 
             binding.textView.setTextColor(item.type.convertTypeToColor())
+
+            binding.dangerousCommentDetailRecyclerView.apply {
+                layoutManager = LinearLayoutManager(context)
+                adapter = DangerousCommentDetailAdapter(item.comment)
+            }
         }
 
     }

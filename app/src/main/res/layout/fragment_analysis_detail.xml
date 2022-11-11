@@ -3,14 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="vm"
+            type="com.khs.ggp.presentation.view.analysisdetail.AnalysisDetailViewModel" />
+    </data>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingHorizontal="12dp">
 
             <TextView
                 android:id="@+id/analysis_detail_tv1"
@@ -27,7 +33,6 @@
                 android:id="@+id/dangerous_comment_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
                 app:layout_constraintTop_toBottomOf="@id/analysis_detail_tv1"/>
 
             <TextView
