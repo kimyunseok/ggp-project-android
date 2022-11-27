@@ -3,7 +3,6 @@ package com.khs.ggp.presentation.view.analysisdetail
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.khs.ggp.domain.model.AnalysisType
 import com.khs.ggp.domain.model.DangerousComment
 import com.khs.ggp.domain.model.DangerousRecommend
 import com.khs.ggp.domain.model.DangerousRecommendDetail

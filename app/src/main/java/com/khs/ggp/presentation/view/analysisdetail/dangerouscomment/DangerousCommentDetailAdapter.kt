@@ -2,13 +2,8 @@ package com.khs.ggp.presentation.view.analysisdetail.dangerouscomment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.khs.ggp.databinding.ItemDangerousCommentDetailHolderBinding
-import com.khs.ggp.databinding.ItemDangerousCommentHolderBinding
-import com.khs.ggp.databinding.ItemYoutubeUrlHolderBinding
-import com.khs.ggp.domain.model.DangerousComment
-import com.khs.ggp.presentation.utils.convertTypeToColor
 
 class DangerousCommentDetailAdapter(private val dangerousCommentDetailList: List<String>): RecyclerView.Adapter<DangerousCommentDetailAdapter.DangerousCommentDetailHolder>() {
 
