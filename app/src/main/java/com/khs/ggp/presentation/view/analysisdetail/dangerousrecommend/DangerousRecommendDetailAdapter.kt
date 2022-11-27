@@ -1,5 +1,7 @@
 package com.khs.ggp.presentation.view.analysisdetail.dangerousrecommend
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -29,6 +31,16 @@ class DangerousRecommendDetailAdapter(private val youtubeIdList: List<DangerousR
             binding.imageView.load(youtubeThumbnailURL)
 
             binding.textView.text = item.title
+
+            itemView.setOnClickListener {
+                val youtubeLinkURL = "https://www.youtube.com/watch?v=${item.youtubeId}"
+
+                val intent = Intent(Intent.ACTION_VIEW).apply {
+                    data = Uri.parse(youtubeLinkURL)
+                }
+
+                itemView.context.startActivity(intent)
+            }
         }
 
     }
