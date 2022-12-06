@@ -2,12 +2,16 @@ package com.khs.ggp.presentation.view.main
 
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.khs.ggp.R
 import com.khs.ggp.databinding.FragmentMainBinding
 import com.khs.ggp.presentation.view.base.BaseFragment
+import com.khs.ggp.presentation.view.base.LoadingDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainFragment(override var layoutId: Int = R.layout.fragment_main) : BaseFragment<FragmentMainBinding>() {
@@ -37,7 +41,13 @@ class MainFragment(override var layoutId: Int = R.layout.fragment_main) : BaseFr
         }
 
         binding.mainAnalyzeRequestBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_analysisFragment)
+            val loadingDialogFragment = LoadingDialogFragment()
+            loadingDialogFragment.show(childFragmentManager, null)
+            lifecycleScope.launch {
+                delay(3000)
+                loadingDialogFragment.dismiss()
+                findNavController().navigate(R.id.action_mainFragment_to_analysisFragment)
+            }
         }
     }
 }

@@ -15,4 +15,6 @@
     <string name="dangerous_comment_in_link">링크(들) 속 댓글들의 위험 요소들은\n다음과 같습니다.</string>
     <string name="dangerous_recommended_contents">노출된 위험 요소에 따라 다음의\n컨텐츠를 추천드립니다.</string>
 
+    <string name="loading">로딩중입니다.\n잠시만 기다려주세요.</string>
+
 </resources>

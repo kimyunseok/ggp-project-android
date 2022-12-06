@@ -12,12 +12,12 @@ class AnalysisViewModel: ViewModel() {
 
     fun getDummyData() {
         viewModelScope.launch {
-            dangerousScoreLiveData.postValue(88)
+            dangerousScoreLiveData.postValue(67)
             dangerousListLiveData.postValue(
                 listOf(
-                    AnalysisType(type = 1, score = 0.768234F),
-                    AnalysisType(type = 2, score = 0.421352F),
-                    AnalysisType(type = 3, score = 0.157689F)
+                    AnalysisType(type = 9, score = 0.53F),
+                    AnalysisType(type = 5, score = 0.31F),
+                    AnalysisType(type = 8, score = 0.09F)
                 )
             )
         }
