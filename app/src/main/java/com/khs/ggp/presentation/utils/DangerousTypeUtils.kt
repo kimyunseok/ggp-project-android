@@ -23,6 +23,12 @@ fun Int.convertTypeToColor(): Int {
         1 -> Color.parseColor("#FF0000")
         2 -> Color.parseColor("#FF8800")
         3 -> Color.parseColor("#0000FF")
+        4 -> Color.parseColor("#FBCEB1")
+        5 -> Color.parseColor("#00CC00")
+        6 -> Color.parseColor("#CC00CC")
+        7 -> Color.parseColor("#663300")
+        8 -> Color.parseColor("#006699")
+        9 -> Color.parseColor("#660033")
         else -> Color.BLACK
     }
 }
