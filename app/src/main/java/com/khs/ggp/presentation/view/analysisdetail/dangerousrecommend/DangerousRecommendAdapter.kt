@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.khs.ggp.databinding.ItemDangerousRecommendHolderBinding
 import com.khs.ggp.domain.model.DangerousRecommend
+import com.khs.ggp.presentation.utils.convertTypeNumToTypeString
 import com.khs.ggp.presentation.utils.convertTypeToColor
 
 class DangerousRecommendAdapter(private val dangerousRecommendList: List<DangerousRecommend>): RecyclerView.Adapter<DangerousRecommendAdapter.DangerousRecommendHolder>() {
@@ -28,7 +29,10 @@ class DangerousRecommendAdapter(private val dangerousRecommendList: List<Dangero
         fun bind(item: DangerousRecommend) {
             binding.item = item
 
-            binding.textView.setTextColor(item.type.convertTypeToColor())
+            binding.titleTv.apply {
+                text = item.type.convertTypeNumToTypeString()
+                setTextColor(item.type.convertTypeToColor())
+            }
 
             binding.dangerousRecommendDetailRecyclerView.apply {
                 layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

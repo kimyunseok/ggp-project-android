@@ -19,22 +19,19 @@ class AnalysisDetailViewModel: ViewModel() {
             dangerousCommentListLiveData.postValue(
                 listOf(
                     DangerousComment(
-                        type = 1, 
-                        title = "악플 / 욕설", 
+                        type = 1,
                         comment = listOf(
                             "안녕하세요.\n저는XXX입니다.\n영상잘보고있어요.", "반갑습니다.", "하이요"
                         )
                     ),
                     DangerousComment(
                         type = 2,
-                        title = "여성 / 가족",
                         comment = listOf(
                             "안녕하세요.", "반갑습니다.", "하이요"
                         )
                     ),
                     DangerousComment(
                         type = 3,
-                        title = "연령",
                         comment = listOf(
                             "안녕하세요.", "반갑습니다.", "하이요"
                         )
@@ -46,7 +43,6 @@ class AnalysisDetailViewModel: ViewModel() {
                 listOf(
                     DangerousRecommend(
                         type = 1,
-                        title = "악플 / 욕설",
                         youtubeIdList = listOf(
                             DangerousRecommendDetail(
                                 youtubeId = "fTf0vT3DcqY",
@@ -60,7 +56,6 @@ class AnalysisDetailViewModel: ViewModel() {
                     ),
                     DangerousRecommend(
                         type = 2,
-                        title = "여성 / 가족",
                         youtubeIdList = listOf(
                             DangerousRecommendDetail(
                                 youtubeId = "LS9OGiyopuU",
@@ -78,7 +73,6 @@ class AnalysisDetailViewModel: ViewModel() {
                     ),
                     DangerousRecommend(
                         type = 3,
-                        title = "연령",
                         youtubeIdList = listOf(
                             DangerousRecommendDetail(
                                 youtubeId = "IgBt1T6WZno",

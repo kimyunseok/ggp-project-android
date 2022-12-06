@@ -15,9 +15,9 @@ class AnalysisViewModel: ViewModel() {
             dangerousScoreLiveData.postValue(88)
             dangerousListLiveData.postValue(
                 listOf(
-                    AnalysisType(type = 1, name = "악플 / 욕설", score = 0.768234F),
-                    AnalysisType(type = 2, name = "여성 / 가족", score = 0.421352F),
-                    AnalysisType(type = 3, name = "연령", score = 0.157689F)
+                    AnalysisType(type = 1, score = 0.768234F),
+                    AnalysisType(type = 2, score = 0.421352F),
+                    AnalysisType(type = 3, score = 0.157689F)
                 )
             )
         }

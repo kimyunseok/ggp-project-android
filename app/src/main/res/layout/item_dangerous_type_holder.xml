@@ -27,7 +27,6 @@
             android:id="@+id/dangerous_type_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{item.name}"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textColor="@color/black"
